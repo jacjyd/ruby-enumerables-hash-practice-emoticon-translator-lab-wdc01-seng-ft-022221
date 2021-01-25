@@ -9,14 +9,14 @@ def load_library(filepath)
   library.map do |meaning, emoticons| 
     library[meaning] = Hash[lang_keys.zip(emoticons)]
   end 
+  binding.pry
   library
 end
 
 def get_japanese_emoticon (filepath, j_icon)
   library = load_library(filepath)
   library.invert
-  binding.pry
-  puts "whyyy"
+
 end
 
 def get_english_meaning
