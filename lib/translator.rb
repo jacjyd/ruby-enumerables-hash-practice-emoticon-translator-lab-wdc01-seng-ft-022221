@@ -28,8 +28,8 @@ def get_english_meaning (filepath, j_icon)
   message = "Sorry, that emoticon was not found"
   library.each do |meaning, guide|
     if guide.value? (j_icon)
-       definition = meaning
+       message = meaning
     end 
   end 
-  definition 
+  message
 end
