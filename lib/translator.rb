@@ -5,7 +5,8 @@ require 'yaml'
 
 def load_library(filepath)
   library = YAML.load_file(filepath)
-  
+  lang_keys = [:english, :japanese]
+  library.
   binding.pry
   puts "whyyyy"
 end
