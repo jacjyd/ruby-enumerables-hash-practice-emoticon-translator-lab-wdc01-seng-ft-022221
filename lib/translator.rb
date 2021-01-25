@@ -7,6 +7,7 @@ def load_library(filepath)
   library = YAML.load_file(filepath)
   lang_keys = [:english, :japanese]
   library.map do |meaning, emoticons| 
+    binding.pry
     meaning = Hash[lang_keys].zip(emoticons)
     binding.pry
   puts "whyyyy"
