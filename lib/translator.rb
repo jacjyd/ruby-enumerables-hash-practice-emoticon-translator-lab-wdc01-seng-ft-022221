@@ -14,7 +14,10 @@ end
 
 def get_japanese_emoticon (filepath, j_icon)
   library = load_library(filepath)
+  
   library.each do |meaning, guide|
+    
+    
     if guide.value? (j_icon)
       return guide[:english]
     end 
