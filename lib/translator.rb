@@ -16,8 +16,7 @@ end
 def get_japanese_emoticon (filepath, j_icon)
   library = load_library(filepath)
   library.each do |meaning, guide|
-    guide.each do |language, emoticon|
-      if m
+    guide.value? j_icon
       
     end 
   end 
