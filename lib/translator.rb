@@ -22,6 +22,11 @@ def get_japanese_emoticon (filepath, j_icon)
 
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning (filepath, j_icon)
+  library = load_library(filepath)
+  library.each do |meaning, guide|
+    if guide.value? (j_icon)
+      return meaning
+    end 
+  end 
 end
