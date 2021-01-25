@@ -25,7 +25,9 @@ end
 
 def get_english_meaning (filepath, j_icon)
   library = load_library(filepath)
+  
   message = "Sorry, that emoticon was not found"
+  
   library.each do |meaning, guide|
     if guide.value? (j_icon)
        message = meaning
