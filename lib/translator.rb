@@ -15,7 +15,7 @@ end
 
 def get_japanese_emoticon (filepath, j_icon)
   library = load_library(filepath)
-  
+  library.each
 
 end
 
