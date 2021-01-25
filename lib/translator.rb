@@ -12,11 +12,11 @@ def load_library(filepath)
   library
 end
 
-def get_japanese_emoticon (filepath, j_icon)
+def get_japanese_emoticon (filepath, e_icon)
   library = load_library(filepath)
   
   library.each do |meaning, guide|
-    if guide.value? (j_icon)
+    if guide.value? (e_icon)
       return guide[:english]
     end 
   end 
