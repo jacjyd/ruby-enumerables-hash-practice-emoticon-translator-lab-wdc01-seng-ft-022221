@@ -8,9 +8,10 @@ def load_library(filepath)
   lang_keys = [:english, :japanese]
   library.each do |meaning, emoticons| 
     meaning = Hash[lang_keys].zip(emoticons)
-  end 
-  binding.pry
+    binding.pry
   puts "whyyyy"
+  end 
+  
 end
 
 def get_japanese_emoticon
