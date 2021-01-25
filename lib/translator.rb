@@ -8,10 +8,8 @@ def load_library(filepath)
   lang_keys = [:english, :japanese]
   library.map do |meaning, emoticons| 
     library[meaning] = Hash[lang_keys.zip(emoticons)]
-    binding.pry
-  puts "whyyyy"
   end 
-  
+  library
 end
 
 def get_japanese_emoticon
