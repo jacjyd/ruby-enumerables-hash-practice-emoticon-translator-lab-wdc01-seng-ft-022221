@@ -9,15 +9,14 @@ def load_library(filepath)
   library.map do |meaning, emoticons| 
     library[meaning] = Hash[lang_keys.zip(emoticons)]
   end 
-  binding.pry
   library
 end
 
 def get_japanese_emoticon (filepath, j_icon)
   library = load_library(filepath)
   library.each do |meaning, guide|
-    guide.value? j_icon
-      
+    if guide.value? (j_icon)
+      return guide[:english]
     end 
   end 
 
