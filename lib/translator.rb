@@ -15,12 +15,14 @@ end
 def get_japanese_emoticon (filepath, e_icon)
   library = load_library(filepath)
   
+  message = "Sorry, that emoticon was not found"
+  
   library.each do |meaning, guide|
     if guide.value? (e_icon)
-      return guide[:japanese]
+      message = guide[:japanese]
     end 
   end 
-  
+  message
 end
 
 def get_english_meaning (filepath, j_icon)
